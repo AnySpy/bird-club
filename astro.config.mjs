@@ -3,6 +3,5 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://anyspy.github.io',
-    base: 'bird-club',
+    site: 'https://thebirdclubmsu.com',
 });
