@@ -1,19 +1,15 @@
 ---
-    import AlbumCover from '../../public/AlbumCover.jpg';
-    import GroupPhoto from '../../public/GroupPhoto.jpg';
-    import NightHeron from '../../public/NightHeron.jpg';
-
     const images = [
-        AlbumCover,
-        GroupPhoto,
-        NightHeron,
-    ];
+        '/AlbumCover.jpg',
+        '/GroupPhoto.jpg',
+        '/NightHeron.jpg',
+    ]
 ---
 
 <div class="carousel">
     <div class="slides" id="slide-track">
         {images.map((src, i) => (
-            <img src={src.src} class="slide" alt={`Slide ${i + 1}`} />
+            <img src={src} class="slide" alt={`Slide ${i + 1}`} />
     ))}
     </div>
     <button id="prev">&#10094;</button>
