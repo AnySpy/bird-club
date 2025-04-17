@@ -1,12 +1,16 @@
+---
+    import Carousel from './Carousel.astro'
+---
+
 <body>
     <div class="container">
-        <p>Hello world!</p>
+        <Carousel client:load />
     </div>
 </body>
 
 <style>
     .container {
-        height: 90%;
-        width: 100%;
+        padding: 2%;
+        background-color: #F5F5F5;
     }
 </style>

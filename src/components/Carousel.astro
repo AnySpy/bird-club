@@ -1,0 +1,78 @@
+---
+    const images = [
+        '/AlbumCover.jpg',
+        '/GroupPhoto.jpg',
+        '/NightHeron.jpg',
+    ]
+---
+
+<div class="carousel">
+    <div class="slides" id="slide-track">
+        {images.map((src, i) => (
+            <img src={src} class="slide" alt={`Slide ${i + 1}`} />
+    ))}
+    </div>
+    <button id="prev">&#10094;</button>
+    <button id="next">&#10095;</button>
+</div>
+
+<style>
+    .carousel {
+        position: relative;
+        height: auto;
+        width: 100%;
+        max-width: 600px;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    .slides {
+        display: flex;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .slide {
+        min-width: 100%;
+        object-fit: cover;
+    }
+
+    button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1000;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 0.5em 1em;
+        cursor: pointer;
+    }
+
+    #prev {
+        left: 0;
+    }
+
+    #next {
+        right: 0;
+    }
+</style>
+
+<script type="module">
+    const slides = document.getElementById('slide-track');
+    let currentIndex = 0;
+
+    const updateSlide = () => {
+        slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+    };
+
+    document.getElementById('next').addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % slides.children.length;
+        updateSlide();
+    });
+
+    document.getElementById('prev').addEventListener('click', () => {
+       currentIndex = (currentIndex + slides.children.length - 1) % slides.children.length;
+       updateSlide();
+    });
+    
+</script>
