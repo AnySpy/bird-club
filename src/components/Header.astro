@@ -1,14 +1,19 @@
-<!-- Make a:active work -->
-
+---
+    const navItems = [
+        { href: '/', label: 'Home' },
+        { href: '/calendar', label: 'Calendar' },
+        { href: '/about', label: 'About' },
+    ];
+---
 <header>
     <div class="container">
         <img class="logo" src="/favicon.jpg"/>
 
         <!-- Desktop -->
         <nav class="nav desktopNav">
-            <a href="/">Home</a>
-            <a href="/calendar">Calendar</a>
-            <a href="/about">About</a>
+            {navItems.map(({ href, label }) => (
+                <a href={href}>{label}</a>     
+            ))}
         </nav>
 
         <!-- Mobile -->
@@ -20,9 +25,9 @@
                 <span></span>
                 
                 <div class="slideoutMenu">
-                    <a href="/">Home</a>
-                    <a href="/calendar">Calendar</a>
-                    <a href="/about">About</a>
+                    {navItems.map(({ href, label }) => (
+                        <a href={href}>{label}</a>
+                    ))}
                 </div>
             </label>
         </div>
