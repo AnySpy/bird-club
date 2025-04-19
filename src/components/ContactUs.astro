@@ -1,0 +1,88 @@
+---
+    if (Astro.request.method == "POST") {
+        try {
+            const data = await Astro.request.formData();
+            const firstName = data.get("first-name");
+            const lastName = data.get("last-name");
+            const email = data.get("email");
+            const subject = data.get("subject");
+            const message = data.get("message");
+        } catch (error) {
+            if (error instanceof Error) {
+                console.error(error.message);
+            }
+        }
+    }
+---
+
+<div class="wip">
+    <h1>This is not implemented! To contact us, please refer to our BearLink page:</h1>
+    <a href="https://missouristate.presence.io/organization/the-bird-club" target="_blank">
+        <button>Contact Us</button>
+    </a>
+</div>
+
+<form method="POST">
+    <label>
+        First Name:
+        <input type="text" class="first-name" required />
+    </label>
+    <label>
+        Last Name:
+        <input type="text" class="last-name" required />
+    </label>
+    <label>
+        Email Address:
+        <input type="email" class="email" required />
+    </label>
+    <label>
+        Subject:
+        <input type="text" class="subject" required />
+    </label>
+    <label>
+        Message:
+        <input type="text" class="message" required />
+    </label>
+    <button>Submit</button>
+</form>
+
+<style>
+    .wip {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 2%;
+    }
+
+    /* From Uiverse.io by lenfear23 */ 
+    button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        outline: none;
+        cursor: pointer;
+        width: 150px;
+        height: 50px;
+        background-image: linear-gradient(to top, #D8D9DB 0%, #fff 80%, #FDFDFD 100%);
+        border-radius: 30px;
+        border: 1px solid #8F9092;
+        transition: all 0.2s ease;
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        color: #606060;
+        text-shadow: 0 1px #fff;
+    }
+
+    button:hover {
+        box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 3px 3px #CECFD1;
+    }
+
+    button:active {
+        box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+    }
+
+    button:focus {
+        box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+    }
+</style>
