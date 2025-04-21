@@ -1,11 +1,17 @@
 <div class="container">
     <div class="info-container">
-        <h1 class="header">Basic Information</h1>
-        <div class="text-container">
-            <span>At The Bird Club, we want to provide students an opportunity to get out, enjoy nature, and learn about birds. 
-                We do this by offering field trips, volunteer activities, and more! We are a campus chapter of the National Audubon Society. 
-                We welcome all levels of experience, from those who are simply curious to experienced birders.
-            </span>
+        <h1 class="header">Who We Are</h1>
+        <div class="body-container">
+            <div class="img-container">
+                <img src="/AboutUs.jpg" class="about-us"/>
+            </div>
+            <div class="text-container">
+                <span>At The Bird Club, we want to provide students an opportunity to get out, enjoy nature, and learn about birds. 
+                    We do this by offering field trips, volunteer activities, and more! <br /> <br />
+                    We are a campus chapter of the National Audubon Society. 
+                    We welcome all levels of experience, from those who are simply curious to experienced birders.
+                </span>
+            </div>
         </div>
     </div>  
 
@@ -13,7 +19,10 @@
         <h1 class="header">Organization Information</h1>
         <div class="org-info">
             <h2>When do elections happen?</h2>
-            <span>End of the fall semester.</span>
+            <span>
+                Our elections happen at the end of the fall semester. <br />
+                If you are interested in joining, please reach out to a current officer!
+            </span>
         </div>
     </div>
 </div>
@@ -33,6 +42,20 @@
         width: 90%;
         height: fit-content;
     }
+
+    .body-container {
+        display: flex;
+    }
+
+    .img-container {
+        width: 200%;
+        object-fit: contain;
+    }
+
+    .about-us {
+        width: 100%;
+        height: 100%;
+    }
     
     .header {
         text-align: center;
@@ -42,17 +65,18 @@
     
     .text-container {
         background-color: #E0DBD0;
-        size: 2vw;
+        font-size: 1.5vw;
         margin: 0;
         padding-left: 4%;
         padding-right: 4%;
-        padding-top: 0.5%;
+        padding-top: 5%;
         padding-bottom: 0.5%;
     }
 
     .org-container {
         width: 90%;
         margin-top: 2%;
+        margin-bottom: 8%;
         background-color: #B6B3AA;
     }
 
@@ -60,7 +84,12 @@
         background-color: #D2CEC3;
         width: fit-content;
         margin: 0;
-        margin-left: 4%;
+        padding-top: 0.001%;
+        padding-left: 2%;
+    }
+    
+    .org-info span {
+        padding-right: 2%;
     }
     
 </style>
