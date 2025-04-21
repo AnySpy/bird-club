@@ -11,3 +11,7 @@ We are also a chapter of the Greater Ozarks Audubon Society! They have helped us
 # Contributing
 
 I will only allow contributing access to verified officers of the club who request it! If you have an idea or a better way to do something I have implemented, message me on Github and I'll provide credit as necessary!
+
+# Roadmap
+
+I need to make a better "About Us" page. I'm having block with that. On top of that, the footer is very basic and I'd like to make it better.
